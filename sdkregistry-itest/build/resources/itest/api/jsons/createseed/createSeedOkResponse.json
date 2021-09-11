@@ -1,6 +1,0 @@
-{
-  "data": {
-    "seed1": "${json-unit.regex}[a-fA-F0-9]{40}",
-    "seed2": "${json-unit.regex}[a-fA-F0-9]{40}"
-  }
-}

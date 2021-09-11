@@ -1,4 +1,0 @@
-com/meawallet/sdkregistry/out/attestation/AttestationRegistrationOutServiceTest.java
- com.meawallet.sdkregistry.out.attestation.AttestationRegistrationOutServiceTest
-com/meawallet/sdkregistry/out/attestation/AttestationTestData.java
- com.meawallet.sdkregistry.out.attestation.AttestationTestData

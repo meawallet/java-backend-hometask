@@ -1,8 +1,0 @@
-com/meawallet/sdkregistry/out/cloudmessaging/CloudMessagingServiceProperties.java
- com.meawallet.sdkregistry.out.cloudmessaging.CloudMessagingServiceProperties
-com/meawallet/sdkregistry/out/cloudmessaging/CloudMessagingServiceConfig.java
- com.meawallet.sdkregistry.out.cloudmessaging.CloudMessagingServiceConfig
-com/meawallet/sdkregistry/out/cloudmessaging/CloudMessagingServiceRegistrationCommand.java
- com.meawallet.sdkregistry.out.cloudmessaging.CloudMessagingServiceRegistrationCommand
-com/meawallet/sdkregistry/out/cloudmessaging/CloudMessagingRegistrationOutService.java
- com.meawallet.sdkregistry.out.cloudmessaging.CloudMessagingRegistrationOutService

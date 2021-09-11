@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.meawallet.sdkregistry.cryptography.RandomGeneratorImplTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-09-11T09:58:11" hostname="Olegss-MacBook-Pro-2.local" time="0.302">
-  <properties/>
-  <testcase name="shouldGenerateRandom()" classname="com.meawallet.sdkregistry.cryptography.RandomGeneratorImplTest" time="0.302"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

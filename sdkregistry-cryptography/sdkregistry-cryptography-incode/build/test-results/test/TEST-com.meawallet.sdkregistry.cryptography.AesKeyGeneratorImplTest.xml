@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.meawallet.sdkregistry.cryptography.AesKeyGeneratorImplTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-09-11T09:58:10" hostname="Olegss-MacBook-Pro-2.local" time="0.656">
-  <properties/>
-  <testcase name="shouldGenerateAes128Key()" classname="com.meawallet.sdkregistry.cryptography.AesKeyGeneratorImplTest" time="0.648"/>
-  <testcase name="shouldGenerateAes256Key()" classname="com.meawallet.sdkregistry.cryptography.AesKeyGeneratorImplTest" time="0.004"/>
-  <system-out><![CDATA[12:58:11.376 [Test worker] DEBUG reactor.util.Loggers - Using Slf4j logging framework
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
