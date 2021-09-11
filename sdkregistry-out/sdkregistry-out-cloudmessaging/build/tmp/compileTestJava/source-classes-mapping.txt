@@ -1,0 +1,4 @@
+com/meawallet/sdkregistry/out/cloudmessaging/CloudMessagingRegistrationOutServiceTest.java
+ com.meawallet.sdkregistry.out.cloudmessaging.CloudMessagingRegistrationOutServiceTest
+com/meawallet/sdkregistry/out/cloudmessaging/CloudMessagingTestData.java
+ com.meawallet.sdkregistry.out.cloudmessaging.CloudMessagingTestData

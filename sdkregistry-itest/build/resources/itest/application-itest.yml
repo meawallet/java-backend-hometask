@@ -1,0 +1,36 @@
+logging:
+  config: classpath:logback-spring.xml
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  r2dbc:
+    url: r2dbc:h2:mem:///sdkregistry-test;IFEXISTS=TRUE;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=TRUE;
+    username: sa
+    password:
+  liquibase:
+    url: jdbc:h2:mem:sdkregistry-test;MODE=PostgreSQL;DB_CLOSE_DELAY=-1
+    close-datasource: false
+    user: sa
+    password:
+    change-log: classpath:db/sdkregistry/master.xml
+    contexts: master
+    driver-class-name: org.h2.Driver
+  dbunit:
+    datasource:
+      url: jdbc:h2:mem:sdkregistry-test;IFEXISTS=TRUE;MODE=PostgreSQL;DB_CLOSE_DELAY=-1
+      driver: org.h2.Driver
+      username: sa
+      password:
+
+sdkregistry:
+  http-in:
+    global-timeout: 15s
+  attestation-service:
+    registration-url: http://localhost:10001/attestation/v1/registration
+    timeout: 5s
+  cloud-messaging-service:
+    registration-url: http://localhost:10002/cloudmessaging/v1/registration
+    timeout: 5s
+  transaction-service:
+    registration-url: http://localhost:10003/transaction/v1/registration
+    timeout: 5s

@@ -1,0 +1,40 @@
+plugins {
+    id 'org.springframework.boot' version '2.4.5'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'org.unbroken-dome.test-sets' version '4.0.0'
+}
+
+apply plugin: 'idea'
+
+allprojects {
+    repositories {
+        mavenCentral()
+        maven {
+            url 'https://repo.spring.io/milestone'
+        }
+    }
+}
+
+subprojects {
+
+    apply from: "${rootDir}/gradle/dep-management.gradle"
+    apply from: "${rootDir}/gradle/java.gradle"
+
+    dependencies {
+        annotationProcessor deps.lombok
+        compileOnly deps.lombok
+        testAnnotationProcessor deps.lombok
+        testCompileOnly deps.lombok
+        testImplementation deps.tests
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+}
+
+idea {
+    project {
+        languageLevel = "1.11"
+    }
+}

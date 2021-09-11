@@ -1,0 +1,9 @@
+{
+  "response": {
+    "status": 204,
+    "fixedDelayMilliseconds": 3500,
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

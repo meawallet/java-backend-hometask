@@ -1,0 +1,23 @@
+apply from: "${rootDir}/gradle/itest.gradle"
+dependencies {
+    itestImplementation deps.validation
+    itestImplementation deps.reactor
+    itestImplementation deps.codec
+    itestImplementation deps.springWeb
+    itestImplementation deps.tests
+    itestImplementation deps.h2
+    itestImplementation deps.r2dbc
+    itestImplementation deps.liquibase
+    itestImplementation deps.validation
+    itestImplementation deps.jackson
+    itestImplementation deps.springWeb
+
+    itestImplementation project(":sdkregistry-cryptography:sdkregistry-cryptography-incode")
+    itestImplementation project(":sdkregistry-in:sdkregistry-in-http")
+    itestImplementation project(":sdkregistry-out:sdkregistry-out-attestation")
+    itestImplementation project(":sdkregistry-out:sdkregistry-out-cloudmessaging")
+    itestImplementation project(":sdkregistry-out:sdkregistry-out-transaction")
+    itestImplementation project(":sdkregitry-api")
+    itestImplementation project(":sdkregitry-core")
+    itestImplementation project(":sdkregitry-model")
+}

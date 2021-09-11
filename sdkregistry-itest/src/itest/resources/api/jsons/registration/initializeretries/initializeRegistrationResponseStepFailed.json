@@ -1,0 +1,6 @@
+{
+  "error": {
+    "code": "INTERNAL_RETRYABLE",
+    "description": "${json-unit.any-string}"
+  }
+}

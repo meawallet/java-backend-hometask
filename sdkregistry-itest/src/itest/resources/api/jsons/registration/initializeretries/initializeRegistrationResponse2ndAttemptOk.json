@@ -1,0 +1,24 @@
+{
+  "data": {
+    "keyset": {
+      "keySetId": "eaa08cd1c42059975f42f20332decf0d",
+      "push": {
+        "dataEncryptionKey": "6128b25d60169384c426b6baf3ea1d7c90b786a94460ec7e661d6b6e7ee6cbc6",
+        "dataMacKey": "3788153de02d59ae72eddcae72f8e2d690b786a94460ec7e661d6b6e7ee6cbc6",
+        "messageMacKey": "3a758101e8a25cd77b9cbd09e35f210490b786a94460ec7e661d6b6e7ee6cbc6"
+      },
+      "attestation": {
+        "encryptionKey": "ed712395d4c1c26f12713def0ffd30e090b786a94460ec7e661d6b6e7ee6cbc6",
+        "macKey": "6f3fc10ceefd533fa57b449790c1493c90b786a94460ec7e661d6b6e7ee6cbc6"
+      },
+      "transaction": {
+        "encryptionKey": "d0180b6b332d7eab2e109028c521e6ec90b786a94460ec7e661d6b6e7ee6cbc6",
+        "macKey": "b5585cd8443c6540afb74e7f644969d090b786a94460ec7e661d6b6e7ee6cbc6"
+      },
+      "secretKey": {
+        "key": "6904f672941163c8b24e5f7d17d4dbe290b786a94460ec7e661d6b6e7ee6cbc6",
+        "fingerprint": "0371f80a4149e86a263f233efb3a18ff911613e43f862b7e0813598bbac93fec"
+      }
+    }
+  }
+}

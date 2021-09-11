@@ -1,0 +1,12 @@
+rootProject.name = 'java-backend-hometask'
+
+include "sdkregitry-api"
+include "sdkregitry-core"
+include "sdkregitry-model"
+include "sdkregistry-in:sdkregistry-in-http"
+include "sdkregistry-cryptography:sdkregistry-cryptography-incode"
+include "sdkregistry-cache:sdkregistry-cache-in-memory"
+include "sdkregistry-out:sdkregistry-out-cloudmessaging"
+include "sdkregistry-out:sdkregistry-out-attestation"
+include "sdkregistry-out:sdkregistry-out-transaction"
+include "sdkregistry-itest"

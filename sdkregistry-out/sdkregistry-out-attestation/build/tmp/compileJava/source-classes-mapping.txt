@@ -1,0 +1,8 @@
+com/meawallet/sdkregistry/out/attestation/AttestationServiceProperties.java
+ com.meawallet.sdkregistry.out.attestation.AttestationServiceProperties
+com/meawallet/sdkregistry/out/attestation/AttestationServiceRegistrationCommand.java
+ com.meawallet.sdkregistry.out.attestation.AttestationServiceRegistrationCommand
+com/meawallet/sdkregistry/out/attestation/AttestationRegistrationOutService.java
+ com.meawallet.sdkregistry.out.attestation.AttestationRegistrationOutService
+com/meawallet/sdkregistry/out/attestation/AttestationServiceConfig.java
+ com.meawallet.sdkregistry.out.attestation.AttestationServiceConfig

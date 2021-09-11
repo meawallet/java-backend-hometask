@@ -1,0 +1,249 @@
+apply plugin: "io.spring.dependency-management"
+
+ext {
+    depsVersions = [
+            lombok            : "1.18.20",
+            spring            : [
+                    boot          : "2.4.5",
+                    core          : "5.3.6",
+                    r2dbc         : "1.3.0",
+                    dataCommons   : "2.5.0",
+                    dataRelational: "2.2.0",
+                    dbunit        : "1.3.0",
+                    wiremock      : "3.0.2",
+                    cloudAws      : "2.3.1"
+            ],
+            r2dbc             : [
+                    spi       : "0.8.4.RELEASE",
+                    postgresql: "0.8.7.RELEASE",
+                    h2        : "0.8.4.RELEASE",
+                    proxy     : "0.8.5.RELEASE",
+                    pool      : "0.8.6.RELEASE",
+            ],
+            postgresql        : "42.2.20",
+            h2                : "1.4.200",
+            liquibase         : "4.3.4",
+            hikaricp          : "4.0.3",
+            jaxbApi           : "2.3.1",
+            snakeyaml         : "1.28",
+            snakeyamlEngine   : "2.3",
+            commons           : [
+                    io          : "2.8.0",
+                    lang3       : "3.12.0",
+                    collections4: "4.4",
+                    commons     : "4.4",
+                    codec       : "1.15",
+                    logging     : "1.2"
+            ],
+            httpcomponents    : [
+                    httpclient: "4.5.13",
+                    httpcore  : "4.4.14",
+            ],
+            jodatime          : "2.10.10",
+            wiremock          : "2.27.2",
+            mockitoCore       : "3.4.4",
+            junit             : "4.13",
+            velocity          : "1.7",
+            reactor           : [
+                    core   : "3.4.5",
+                    netty  : "1.0.6",
+                    extra  : "3.4.3",
+                    adapter: "3.4.3",
+            ],
+            scram             : "2.1",
+            netty             : [
+                    transportNativeEpoll : "4.1.63.Final",
+                    transportNativeKqueue: "4.1.63.Final",
+            ],
+            jackson           : "2.12.3",
+            activemq          : "5.16.1",
+            jakartaJms        : "2.0.3",
+            jakartaEl         : "3.0.3",
+            hibernateValidator: "6.1.7.Final",
+            xalan             : "2.7.2",
+            awaitility        : "4.0.3",
+            slf4jApi          : "1.7.30",
+            logback           : "1.2.3",
+            dbunit            : "2.7.0",
+            micrometer        : "1.6.6",
+            findbugs          : "3.0.1",
+            javaxCache        : "1.1.1",
+            guava             : "30.1.1-jre",
+            jose              : "9.9",
+            bouncycastle      : [
+                    bcprov: "1.68",
+                    bcpkix: "1.68",
+                    fips  : "1.0.2"
+            ],
+            tink              : "1.5.0",
+            jcip              : "1.0-1",
+            javaxValidation   : "2.0.1.Final",
+            jsonUnit          : "2.25.0",
+            amazonaws         : "1.11.951"
+    ]
+
+    deps = [
+            lombok         : "org.projectlombok:lombok",
+            r2dbc          : "org.springframework.data:spring-data-r2dbc",
+            liquibase      : [
+                    "com.zaxxer:HikariCP",
+                    "org.liquibase:liquibase-core",
+                    "org.springframework:spring-jdbc"
+            ],
+            h2             : [
+                    "com.h2database:h2",
+                    "io.r2dbc:r2dbc-h2",
+            ],
+            validation     : "org.springframework.boot:spring-boot-starter-validation",
+            jackson        : [
+                    "com.fasterxml.jackson.core:jackson-databind",
+                    "com.fasterxml.jackson.core:jackson-annotations"
+            ],
+            springContext  : [
+                    "org.springframework:spring-context",
+                    "org.springframework.boot:spring-boot-autoconfigure"
+            ],
+            springWeb      : "org.springframework.boot:spring-boot-starter-webflux",
+            reactor        : [
+                    "io.projectreactor:reactor-core",
+                    "io.projectreactor.addons:reactor-extra"
+            ],
+            codec          : "commons-codec:commons-codec",
+            tests       : [
+                    "org.mockito:mockito-core",
+                    "junit:junit",
+                    "org.springframework.boot:spring-boot-starter-test",
+                    "io.projectreactor:reactor-test",
+                    "org.springframework.cloud:spring-cloud-contract-wiremock",
+                    "org.springframework.cloud:spring-cloud-contract-wiremock",
+                    "org.dbunit:dbunit",
+                    "com.github.springtestdbunit:spring-test-dbunit",
+                    "net.javacrumbs.json-unit:json-unit-assertj"
+            ],
+    ]
+}
+
+dependencyManagement {
+    dependencies {
+        dependency "org.projectlombok:lombok:$depsVersions.lombok"
+
+        dependency "org.springframework.boot:spring-boot:$depsVersions.spring.boot"
+        dependency "org.springframework.boot:spring-boot-autoconfigure:$depsVersions.spring.boot"
+        dependency "org.springframework.boot:spring-boot-starter:$depsVersions.spring.boot"
+        dependency "org.springframework.boot:spring-boot-starter-webflux:$depsVersions.spring.boot"
+        dependency "org.springframework.boot:spring-boot-starter-activemq:$depsVersions.spring.boot"
+        dependency "org.springframework.boot:spring-boot-starter-logging:$depsVersions.spring.boot"
+        dependency "org.springframework.boot:spring-boot-starter-test:$depsVersions.spring.boot"
+        dependency "org.springframework.boot:spring-boot-starter-actuator:$depsVersions.spring.boot"
+        dependency "org.springframework.boot:spring-boot-actuator:$depsVersions.spring.boot"
+        dependency "org.springframework.boot:spring-boot-actuator-autoconfigure:$depsVersions.spring.boot"
+        dependency "org.springframework.boot:spring-boot-starter-reactor-netty:$depsVersions.spring.boot"
+        dependency "org.springframework.boot:spring-boot-starter-json:$depsVersions.spring.boot"
+        dependency "org.springframework.boot:spring-boot-starter-validation:$depsVersions.spring.boot"
+        dependency "org.springframework.boot:spring-boot-starter-data-r2dbc:$depsVersions.spring.boot"
+        dependency "org.springframework.boot:spring-boot-configuration-processor:$depsVersions.spring.boot"
+        dependency "org.springframework.data:spring-data-r2dbc:$depsVersions.spring.r2dbc"
+        dependency "org.springframework.data:spring-data-commons:$depsVersions.spring.dataCommons"
+        dependency "org.springframework.data:spring-data-relational:$depsVersions.spring.dataRelational"
+        dependency "org.springframework.boot:spring-boot-starter-data-redis-reactive:$depsVersions.spring.boot"
+
+        dependency "org.springframework:spring-tx:$depsVersions.spring.core"
+        dependency "org.springframework:spring-web:$depsVersions.spring.core"
+        dependency "org.springframework:spring-webflux:$depsVersions.spring.core"
+        dependency "org.springframework:spring-aop:$depsVersions.spring.core"
+        dependency "org.springframework:spring-beans:$depsVersions.spring.core"
+        dependency "org.springframework:spring-context:$depsVersions.spring.core"
+        dependency "org.springframework:spring-core:$depsVersions.spring.core"
+        dependency "org.springframework:spring-expression:$depsVersions.spring.core"
+        dependency "org.springframework:spring-jcl:$depsVersions.spring.core"
+        dependency "org.springframework:spring-jms:$depsVersions.spring.core"
+        dependency "org.springframework:spring-jdbc:$depsVersions.spring.core"
+        dependency "org.springframework:spring-messaging:$depsVersions.spring.core"
+        dependency "org.springframework:spring-test:$depsVersions.spring.core"
+        dependency "org.springframework:spring-r2dbc:$depsVersions.spring.core"
+
+        dependency "commons-codec:commons-codec:$depsVersions.commons.codec"
+        dependency "commons-logging:commons-logging:$depsVersions.commons.logging"
+        dependency "commons-io:commons-io:$depsVersions.commons.io"
+        dependency "org.apache.commons:commons-lang3:$depsVersions.commons.lang3"
+        dependency "org.apache.commons:commons-collections4:$depsVersions.commons.collections4"
+        dependency "org.apache.httpcomponents:httpclient:$depsVersions.httpcomponents.httpclient"
+        dependency "org.apache.httpcomponents:httpcore:$depsVersions.httpcomponents.httpcore"
+
+        dependency "io.r2dbc:r2dbc-spi:$depsVersions.r2dbc.spi"
+        dependency "io.r2dbc:r2dbc-postgresql:$depsVersions.r2dbc.postgresql"
+        dependency "io.r2dbc:r2dbc-h2:$depsVersions.r2dbc.h2"
+        dependency "io.r2dbc:r2dbc-proxy:$depsVersions.r2dbc.proxy"
+        dependency "io.r2dbc:r2dbc-pool:$depsVersions.r2dbc.pool"
+        dependency "org.postgresql:postgresql:$depsVersions.postgresql"
+        dependency "org.liquibase:liquibase-core:$depsVersions.liquibase"
+        dependency "com.zaxxer:HikariCP:$depsVersions.hikaricp"
+        dependency "com.h2database:h2:$depsVersions.h2"
+        dependency "javax.xml.bind:jaxb-api:$depsVersions.jaxbApi"
+        dependency "org.yaml:snakeyaml:$depsVersions.snakeyaml"
+        dependency "joda-time:joda-time:$depsVersions.jodatime"
+        dependency "org.apache.velocity:velocity:$depsVersions.velocity"
+        dependency "org.dbunit:dbunit:$depsVersions.dbunit"
+        dependency "com.github.springtestdbunit:spring-test-dbunit:$depsVersions.spring.dbunit"
+
+        dependency "io.projectreactor:reactor-core:$depsVersions.reactor.core"
+        dependency "io.projectreactor:reactor-test:$depsVersions.reactor.core"
+        dependency "io.projectreactor:reactor-tools:$depsVersions.reactor.core"
+        dependency "io.projectreactor.netty:reactor-netty:$depsVersions.reactor.netty"
+        dependency "io.projectreactor.netty:reactor-netty-core:$depsVersions.reactor.netty"
+        dependency "io.projectreactor.netty:reactor-netty-http:$depsVersions.reactor.netty"
+        dependency "io.projectreactor.addons:reactor-extra:$depsVersions.reactor.extra"
+        dependency "io.projectreactor.addons:reactor-adapter:$depsVersions.reactor.adapter"
+        dependency "com.ongres.scram:client:$depsVersions.scram"
+        dependency "io.netty:netty-transport-native-epoll:$depsVersions.netty.transportNativeEpoll"
+        dependency "io.netty:netty-transport-native-epoll:$depsVersions.netty.transportNativeKqueue"
+
+        dependency "com.fasterxml.jackson.core:jackson-core:$depsVersions.jackson"
+        dependency "com.fasterxml.jackson.core:jackson-databind:$depsVersions.jackson"
+        dependency "com.fasterxml.jackson.core:jackson-annotations:$depsVersions.jackson"
+        dependency "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:$depsVersions.jackson"
+        dependency "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:$depsVersions.jackson"
+        dependency "com.fasterxml.jackson.module:jackson-module-parameter-names:$depsVersions.jackson"
+        dependency "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:$depsVersions.jackson"
+
+        dependency "jakarta.jms:jakarta.jms-api:$depsVersions.jakartaJms"
+        dependency "org.apache.activemq:activemq-broker:$depsVersions.activemq"
+        dependency "org.apache.activemq:activemq-client:$depsVersions.activemq"
+        dependency "org.apache.activemq:activemq-openwire-legacy:$depsVersions.activemq"
+        dependency "org.apache.activemq:activemq-jaas:$depsVersions.activemq"
+        dependency "org.apache.activemq:activemq-spring:$depsVersions.activemq"
+
+        dependency "org.glassfish:jakarta.el:$depsVersions.jakartaEl"
+        dependency "org.hibernate.validator:hibernate-validator:$depsVersions.hibernateValidator"
+        dependency "javax.validation:validation-api:$depsVersions.javaxValidation"
+
+        dependency "org.awaitility:awaitility:$depsVersions.awaitility"
+        dependency "org.slf4j:slf4j-api:$depsVersions.slf4jApi"
+        dependency "ch.qos.logback:logback-classic:$depsVersions.logback"
+
+        dependency "io.micrometer:micrometer-registry-prometheus:$depsVersions.micrometer"
+        dependency "io.micrometer:micrometer-core:$depsVersions.micrometer"
+
+        dependency "org.springframework.cloud:spring-cloud-contract-wiremock:$depsVersions.spring.wiremock"
+        dependency "com.github.tomakehurst:wiremock-jre8-standalone:$depsVersions.wiremock"
+
+        dependency "org.bouncycastle:bcprov-jdk15on:$depsVersions.bouncycastle.bcprov"
+        dependency "org.bouncycastle:bcpkix-jdk15on:$depsVersions.bouncycastle.bcpkix"
+
+        dependency "com.hazelcast:hazelcast-all:$depsVersions.hazelcast"
+        dependency "com.google.code.findbugs:annotations:$depsVersions.findbugs"
+        dependency "javax.cache:cache-api:$depsVersions.javaxCache"
+        dependency "org.snakeyaml:snakeyaml-engine:$depsVersions.snakeyamlEngine"
+        dependency "it.ozimov:embedded-redis:$depsVersions.embeddedRedis"
+        dependency "com.google.guava:guava:$depsVersions.guava"
+
+        dependency "com.nimbusds:nimbus-jose-jwt:$depsVersions.jose"
+        dependency "com.github.stephenc.jcip:jcip-annotations:$depsVersions.jcip"
+        dependency "com.google.crypto.tink:tink:$depsVersions.tink"
+        dependency "org.bouncycastle:bc-fips:$depsVersions.bouncycastle.fips"
+
+        dependency "org.mockito:mockito-core:$depsVersions.mockitoCore"
+        dependency "junit:junit:$depsVersions.junit"
+        dependency "net.javacrumbs.json-unit:json-unit-assertj:$depsVersions.jsonUnit"
+    }
+}

@@ -1,0 +1,4 @@
+com/meawallet/sdkregistry/out/transaction/TransactionRegistrationOutServiceTest.java
+ com.meawallet.sdkregistry.out.transaction.TransactionRegistrationOutServiceTest
+com/meawallet/sdkregistry/out/transaction/TransactionTestData.java
+ com.meawallet.sdkregistry.out.transaction.TransactionTestData

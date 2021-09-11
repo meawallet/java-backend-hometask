@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.meawallet.sdkregistry.core.registration.initialize.RgkDecryptionServiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-09-11T09:58:08" hostname="Olegss-MacBook-Pro-2.local" time="0.088">
+  <properties/>
+  <testcase name="shouldDecryptRgk()" classname="com.meawallet.sdkregistry.core.registration.initialize.RgkDecryptionServiceTest" time="0.082"/>
+  <testcase name="shouldFailWhenSharedKeyNotFound()" classname="com.meawallet.sdkregistry.core.registration.initialize.RgkDecryptionServiceTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

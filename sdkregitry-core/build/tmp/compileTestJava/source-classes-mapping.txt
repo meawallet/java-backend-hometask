@@ -1,0 +1,18 @@
+com/meawallet/sdkregistry/core/registration/initialize/PlainSdkKeysetEncryptionServiceTest.java
+ com.meawallet.sdkregistry.core.registration.initialize.PlainSdkKeysetEncryptionServiceTest
+com/meawallet/sdkregistry/core/registration/initialize/SdkInstancePersistenceServiceTest.java
+ com.meawallet.sdkregistry.core.registration.initialize.SdkInstancePersistenceServiceTest
+com/meawallet/sdkregistry/core/registration/complete/CompleteRegistrationServiceTest.java
+ com.meawallet.sdkregistry.core.registration.complete.CompleteRegistrationServiceTest
+com/meawallet/sdkregistry/core/createseed/SeedServiceTest.java
+ com.meawallet.sdkregistry.core.createseed.SeedServiceTest
+com/meawallet/sdkregistry/core/registration/initialize/RgkDecryptionServiceTest.java
+ com.meawallet.sdkregistry.core.registration.initialize.RgkDecryptionServiceTest
+com/meawallet/sdkregistry/core/registration/initialize/PlainSdkKeysetGenerationServiceTest.java
+ com.meawallet.sdkregistry.core.registration.initialize.PlainSdkKeysetGenerationServiceTest
+com/meawallet/sdkregistry/core/registration/initialize/SdkInstanceKeysPersistenceServiceTest.java
+ com.meawallet.sdkregistry.core.registration.initialize.SdkInstanceKeysPersistenceServiceTest
+com/meawallet/sdkregistry/core/TestData.java
+ com.meawallet.sdkregistry.core.TestData
+com/meawallet/sdkregistry/core/registration/initialize/InitializeRegistrationServiceTest.java
+ com.meawallet.sdkregistry.core.registration.initialize.InitializeRegistrationServiceTest

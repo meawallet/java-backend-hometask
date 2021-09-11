@@ -1,0 +1,5 @@
+dependencies {
+    compileOnly deps.validation
+    compileOnly deps.jackson
+    compileOnly deps.reactor
+}

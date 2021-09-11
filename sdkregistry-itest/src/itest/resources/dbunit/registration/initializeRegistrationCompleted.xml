@@ -1,0 +1,24 @@
+<dataset>
+    <sdk_shared_key id="1"
+                    fingerprint="24378cdbdbdc1e226a0ce89285c30431950418174a72a7fb990bd20f1b13825a"
+                    shared_aes_key_hex="cb98cf95ca290708ab1ae47e265c0f48"/>
+    <sdk_instance sdk_instance_id="771E7929535CA0DB0A63F45194B845CD"
+                  sdk_id="POS"
+                  fcm_registration_id="APA91bHPRgkF3JUikC4ENAHEeMrd41Zxv3hVZjC9KtT8OvPVG"
+                  latitude="56.9769399"
+                  longitude="24.1655157"
+    />
+    <sdk_instance_keys sdk_instance_id="771E7929535CA0DB0A63F45194B845CD"
+                       keyset_id="eaa08cd1c42059975f42f20332decf0d"
+                       push_data_enc_key="f72896dc308292f6aa26711d3331e65c"
+                       push_data_mac_key="af6b62a55df6bc0ab76a50ce18088b54"
+                       push_message_mac_key="c7142575feb4ebd80e43f4b4d75ffe88"
+                       attestation_enc_key="acfa5a29334dd171423061574e4fabea"
+                       attestation_mac_key="8232e9fd71e7ba4db3d404934d3cfc83"
+                       transaction_enc_key="82af0a11de94f139cee142bf3f60cc42"
+                       transaction_mac_key="6790068c9db7d51b8d7371f8f21d84e0"
+                       secret_key="7ba90d2e4d5e40341edfe5302aa9bfd5"
+                       secret_key_fingerprint="0371f80a4149e86a263f233efb3a18ff911613e43f862b7e0813598bbac93fec"
+                       is_active="FALSE"
+    />
+</dataset>

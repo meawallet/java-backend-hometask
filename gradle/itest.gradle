@@ -1,0 +1,23 @@
+apply plugin: 'org.unbroken-dome.test-sets'
+apply plugin: 'idea'
+
+testSets {
+    itest
+}
+
+idea {
+    module.iml.withXml {
+        def atts = it.asNode().component.content.sourceFolder
+                .find { it.@url == 'file://$MODULE_DIR$/src/itest/resources' }
+                .attributes()
+        atts.remove('isTestSource')
+        atts.put('type', 'java-test-resource')
+    }
+}
+
+itest {
+    testLogging {
+        showStandardStreams = true
+    }
+    useJUnitPlatform()
+}

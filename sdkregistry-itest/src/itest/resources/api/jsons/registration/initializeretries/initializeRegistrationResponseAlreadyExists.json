@@ -1,0 +1,6 @@
+{
+  "error": {
+    "code": "SDK_INSTANCE_ALREADY_EXISTS",
+    "description": "Sdk instance id '771E7929535CA0DB0A63F45194B845CD' is already registered. Generate another sdk instance id and start registration again"
+  }
+}

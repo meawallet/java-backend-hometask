@@ -1,0 +1,22 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/cloudmessaging/v1/registration",
+    "headers": {
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    },
+    "bodyPatterns": [
+      {
+        "equalToJson": {
+          "sdkInstanceId": "771E7929535CA0DB0A63F45194B845CD",
+          "fcmRegistrationId": "APA91bHPRgkF3JUikC4ENAHEeMrd41Zxv3hVZjC9KtT8OvPVG",
+          "dataEncKey": "${json-unit.regex}[a-fA-F0-9]{32}",
+          "dataMacKey": "${json-unit.regex}[a-fA-F0-9]{32}",
+          "messageMacKey": "${json-unit.regex}[a-fA-F0-9]{32}"
+        }
+      }
+    ]
+  }
+}

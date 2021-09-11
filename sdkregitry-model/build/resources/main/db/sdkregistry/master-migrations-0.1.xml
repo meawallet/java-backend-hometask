@@ -1,0 +1,95 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet author="olegs.sedacs" id="create.table.sdk_shared_key">
+        <createTable tableName="sdk_shared_key">
+            <column autoIncrement="true" name="id" type="bigint">
+                <constraints primaryKey="true" primaryKeyName="pk_sdk_shared_key_id"/>
+            </column>
+            <column name="fingerprint" type="varchar">
+                <constraints nullable="false"
+                             unique="true"
+                             uniqueConstraintName="uq_sdk_shared_key_fingerprint"/>
+            </column>
+            <column name="shared_aes_key_hex" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="olegs.sedacs" id="create.table.sdk_instance">
+        <createTable tableName="sdk_instance">
+            <column autoIncrement="true" name="id" type="bigint">
+                <constraints primaryKey="true" primaryKeyName="pk_sdk_instance_id"/>
+            </column>
+            <column name="sdk_instance_id" type="varchar(64)">
+                <constraints nullable="false"
+                             unique="true"
+                             uniqueConstraintName="uq_sdk_instance_sdk_instance_id"/>
+            </column>
+            <column name="sdk_id" type="varchar(32)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="fcm_registration_id" type="varchar(4096)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="latitude" type="decimal">
+                <constraints nullable="false"/>
+            </column>
+            <column name="longitude" type="decimal">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="timestamp with time zone" defaultValueComputed="now()"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="olegs.sedacs" id="create.table.sdk_instance_keys">
+        <createTable tableName="sdk_instance_keys">
+            <column autoIncrement="true" name="id" type="bigint">
+                <constraints primaryKey="true" primaryKeyName="pk_sdk_instance_keys_id"/>
+            </column>
+            <column name="keyset_id" type="varchar">
+                <constraints nullable="false"
+                             unique="true"
+                             uniqueConstraintName="uq_sdk_instance_keys_keyset_id"/>
+            </column>
+            <column name="sdk_instance_id" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="push_data_enc_key" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="push_data_mac_key" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="push_message_mac_key" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="attestation_enc_key" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="attestation_mac_key" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="transaction_enc_key" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="transaction_mac_key" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="secret_key" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="secret_key_fingerprint" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_active" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="timestamp with time zone" defaultValueComputed="now()"/>
+            <column name="updated_at" type="timestamp with time zone"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

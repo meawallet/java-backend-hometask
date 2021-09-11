@@ -1,0 +1,9 @@
+dependencies {
+    implementation deps.springContext
+    implementation deps.reactor
+    implementation deps.codec
+    implementation project(":sdkregitry-api")
+    implementation project(":sdkregitry-core")
+
+    testImplementation deps.tests
+}

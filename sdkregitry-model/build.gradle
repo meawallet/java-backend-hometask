@@ -1,0 +1,6 @@
+dependencies {
+    compileOnly deps.validation
+
+    api deps.r2dbc
+    api deps.liquibase
+}

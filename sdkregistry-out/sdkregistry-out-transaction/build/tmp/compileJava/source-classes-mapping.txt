@@ -1,0 +1,8 @@
+com/meawallet/sdkregistry/out/transaction/TransactionRegistrationOutService.java
+ com.meawallet.sdkregistry.out.transaction.TransactionRegistrationOutService
+com/meawallet/sdkregistry/out/transaction/TransactionServiceProperties.java
+ com.meawallet.sdkregistry.out.transaction.TransactionServiceProperties
+com/meawallet/sdkregistry/out/transaction/TransactionServiceRegistrationCommand.java
+ com.meawallet.sdkregistry.out.transaction.TransactionServiceRegistrationCommand
+com/meawallet/sdkregistry/out/transaction/TransactionServiceConfig.java
+ com.meawallet.sdkregistry.out.transaction.TransactionServiceConfig
