@@ -1,0 +1,39 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+## Log files
+.log
+*.log
+
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+**/out/production
+**/out/test
+**/out/itest
+
+## Eclipse project files
+.classpath
+.project
+.settings/
+bin/
+
+## Ansible version file
+**/ansible/version.yml
+**/ansible/*.retry
