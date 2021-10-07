@@ -68,6 +68,7 @@ eyJraWQiOiJBMDVBQkU2OEY1MzlDMTQ2MUM3MjA4QjBCQzI2QTFERDZENTZEQkI4QTNDQzU4NTkxOEUz
 #### JWT signing key storage
 
 * Merchant may have many keys.
+* Merchant and Key onboarding is out of scope. You have to prepare data in tests only.
 * The JWT public keys must be stored in a database bound to the merchant name. It can be simple table :
 
 ```
