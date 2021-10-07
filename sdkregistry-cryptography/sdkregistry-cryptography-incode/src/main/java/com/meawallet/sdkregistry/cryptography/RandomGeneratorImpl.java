@@ -6,6 +6,8 @@ import reactor.core.publisher.Mono;
 
 import java.security.SecureRandom;
 
+import static reactor.core.scheduler.Schedulers.boundedElastic;
+
 @AllArgsConstructor
 public class RandomGeneratorImpl implements RandomGenerator {
 
@@ -17,6 +19,6 @@ public class RandomGeneratorImpl implements RandomGenerator {
             var bytes = new byte[length];
             secureRandom.nextBytes(bytes);
             return bytes;
-        });
+        }).subscribeOn(boundedElastic());
     }
 }

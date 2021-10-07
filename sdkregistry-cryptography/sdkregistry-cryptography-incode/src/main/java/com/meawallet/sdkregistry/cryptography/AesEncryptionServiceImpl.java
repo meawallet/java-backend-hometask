@@ -6,6 +6,8 @@ import reactor.core.publisher.Mono;
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 
+import static reactor.core.scheduler.Schedulers.boundedElastic;
+
 public class AesEncryptionServiceImpl implements AesEncryptionService {
 
     @Override
@@ -24,6 +26,6 @@ public class AesEncryptionServiceImpl implements AesEncryptionService {
             var cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
             cipher.init(mode, aesKey);
             return cipher.doFinal(data);
-        });
+        }).subscribeOn(boundedElastic());
     }
 }
