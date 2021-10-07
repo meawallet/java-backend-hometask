@@ -4,6 +4,7 @@ dependencies {
     implementation deps.reactor
     implementation deps.codec
     implementation deps.springWeb
+    implementation deps.springActuator
     implementation project(":sdkregitry-api")
     implementation project(":sdkregitry-core")
 

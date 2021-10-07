@@ -3,6 +3,7 @@ package com.meawallet.sdkregistry.itest;
 import com.github.springtestdbunit.TransactionDbUnitTestExecutionListener;
 import com.meawallet.sdkregistry.itest.config.MocksConfig;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.actuate.metrics.AutoConfigureMetrics;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.context.ApplicationContext;
@@ -31,6 +32,7 @@ import static org.junit.Assert.assertNotNull;
 }, mergeMode = TestExecutionListeners.MergeMode.MERGE_WITH_DEFAULTS)
 
 @ActiveProfiles("itest")
+@AutoConfigureMetrics
 public abstract class BaseIntegrationTest {
 
     @Autowired

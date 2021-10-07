@@ -11,6 +11,7 @@ dependencies {
     itestImplementation deps.validation
     itestImplementation deps.jackson
     itestImplementation deps.springWeb
+    itestImplementation deps.springActuator
 
     itestImplementation project(":sdkregistry-cryptography:sdkregistry-cryptography-incode")
     itestImplementation project(":sdkregistry-in:sdkregistry-in-http")

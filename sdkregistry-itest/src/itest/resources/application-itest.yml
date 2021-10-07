@@ -21,6 +21,20 @@ spring:
       driver: org.h2.Driver
       username: sa
       password:
+management:
+  endpoints:
+    enabled-by-default: false
+    web:
+      base-path: /
+      exposure:
+        include: health, metrics, prometheus
+  endpoint:
+    prometheus:
+      enabled: true
+    metrics:
+      enabled: true
+    health:
+      enabled: true
 
 sdkregistry:
   http-in:

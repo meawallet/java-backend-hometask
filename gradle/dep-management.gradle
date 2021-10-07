@@ -83,33 +83,37 @@ ext {
     ]
 
     deps = [
-            lombok         : "org.projectlombok:lombok",
-            r2dbc          : "org.springframework.data:spring-data-r2dbc",
-            liquibase      : [
+            lombok        : "org.projectlombok:lombok",
+            r2dbc         : "org.springframework.data:spring-data-r2dbc",
+            liquibase     : [
                     "com.zaxxer:HikariCP",
                     "org.liquibase:liquibase-core",
                     "org.springframework:spring-jdbc"
             ],
-            h2             : [
+            h2            : [
                     "com.h2database:h2",
                     "io.r2dbc:r2dbc-h2",
             ],
-            validation     : "org.springframework.boot:spring-boot-starter-validation",
-            jackson        : [
+            validation    : "org.springframework.boot:spring-boot-starter-validation",
+            jackson       : [
                     "com.fasterxml.jackson.core:jackson-databind",
                     "com.fasterxml.jackson.core:jackson-annotations"
             ],
-            springContext  : [
+            springContext : [
                     "org.springframework:spring-context",
                     "org.springframework.boot:spring-boot-autoconfigure"
             ],
-            springWeb      : "org.springframework.boot:spring-boot-starter-webflux",
-            reactor        : [
+            springWeb     : "org.springframework.boot:spring-boot-starter-webflux",
+            springActuator: [
+                    "org.springframework.boot:spring-boot-starter-actuator",
+                    "io.micrometer:micrometer-registry-prometheus"
+            ],
+            reactor       : [
                     "io.projectreactor:reactor-core",
                     "io.projectreactor.addons:reactor-extra"
             ],
-            codec          : "commons-codec:commons-codec",
-            tests       : [
+            codec         : "commons-codec:commons-codec",
+            tests         : [
                     "org.mockito:mockito-core",
                     "junit:junit",
                     "org.springframework.boot:spring-boot-starter-test",
