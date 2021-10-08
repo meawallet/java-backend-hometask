@@ -83,3 +83,6 @@ To solve the problem, you can do absolutely everything that you consider necessa
 * Adding new tables and columns in database
 * Using other technologies (frameworks, caching, ...)
 * ... whatever you want ...
+
+**Note : Please import MeaWalletCodestyle.xml to avoid reformatting of the whole codebase.** 
+
