@@ -1,4 +1,4 @@
-                                                                           # Senior Java Developer test
+# Senior Java Developer test
 
 ##### Estimated execution time: 3h
 
@@ -44,10 +44,10 @@ All endpoints must be secured, except actuator : /health, /metrics, /prometheus
   * alg = must be RS256
   * kid = signing key fingerprint
 * Claims :
-* iss = merchant name
-* iid = SDK instance identifier
-* exp = expiration time
-* iat = issuing time
+  * iss = merchant name
+  * iid = SDK instance identifier
+  * exp = expiration time
+  * iat = issuing time
 
 Valid Signed JWT example :
 
@@ -68,6 +68,7 @@ eyJraWQiOiJBMDVBQkU2OEY1MzlDMTQ2MUM3MjA4QjBCQzI2QTFERDZENTZEQkI4QTNDQzU4NTkxOEUz
 #### JWT signing key storage
 
 * Merchant may have many keys.
+* Merchant and Key onboarding is out of scope. You have to prepare data in tests only.
 * The JWT public keys must be stored in a database bound to the merchant name. It can be simple table :
 
 ```
