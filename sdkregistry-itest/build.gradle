@@ -12,6 +12,8 @@ dependencies {
     itestImplementation deps.jackson
     itestImplementation deps.springWeb
     itestImplementation deps.springActuator
+    itestImplementation deps.springSecurity
+    itestImplementation deps.nimbusJose
 
     itestImplementation project(":sdkregistry-cryptography:sdkregistry-cryptography-incode")
     itestImplementation project(":sdkregistry-in:sdkregistry-in-http")
@@ -21,4 +23,8 @@ dependencies {
     itestImplementation project(":sdkregitry-api")
     itestImplementation project(":sdkregitry-core")
     itestImplementation project(":sdkregitry-model")
+
+//    implementation "org.springframework.boot:spring-boot-starter-security"
+//    implementation "org.springframework.security:spring-security-oauth2-resource-server"
+//    implementation "org.springframework.security:spring-security-oauth2-jose"
 }
