@@ -125,8 +125,6 @@ ext {
                     "net.javacrumbs.json-unit:json-unit-assertj"
             ],
             springSecurity: "org.springframework.boot:spring-boot-starter-security",
-            springAuthResource: "org.springframework.security:spring-security-oauth2-resource-server",
-            springAuthJose: "org.springframework.security:spring-security-oauth2-jose",
             nimbusJose: "com.nimbusds:nimbus-jose-jwt"
     ]
 }
@@ -169,7 +167,6 @@ dependencyManagement {
         dependency "org.springframework:spring-messaging:$depsVersions.spring.core"
         dependency "org.springframework:spring-test:$depsVersions.spring.core"
         dependency "org.springframework:spring-r2dbc:$depsVersions.spring.core"
-        dependency "org.springframework.security:spring-security-test:$depsVersions.spring.core"
 
         dependency "commons-codec:commons-codec:$depsVersions.commons.codec"
         dependency "commons-logging:commons-logging:$depsVersions.commons.logging"
