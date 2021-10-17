@@ -1,0 +1,7 @@
+<dataset>
+    <sdk_merchant_key id="1"
+                      merchant_name="merchantA"
+                      public_key="{&quot;kty&quot;:&quot;RSA&quot;,&quot;e&quot;:&quot;AQAB&quot;,&quot;kid&quot;:&quot;A05ABE68F539C1461C7208B0BC26A1DD6D56DBB8A3CC585918E3967ED65BF3F6&quot;,&quot;n&quot;:&quot;rbg2nwi2SA9D29AaeTaRX8nTleRZDAZTDInKrsAuW217u4ujMZj8Sx3-k7Qnf5FkZPtJHuTbhyNSNejXzcFvAs2NTnz45bxuOCuGTdKPd_WO3ajU3UWtQg_vsG4jjBMKtGzru6PYmgmbF3VyPKAqhaKxMvpE0l7Y1MgKNIj1hroJweji_PIWJSevkyTTkxym6CcxBMtHJoAXkbcYW5-cLFdgsZzIKFuj5N2CVLH7eqqxOUNhGqeNjZcNkFByQVUzx8zuFKDxIYvgJJI7aKRWktsNnBQyv-CYwlAQAkTNCHUpo84udwGVxFBwR2fX3wn6lhhGv9RiUoA5tLaHZ19ctQ&quot;}"
+                      kid="A05ABE68F539C1461C7208B0BC26A1DD6D56DBB8A3CC585918E3967ED65BF3F6"
+    />
+</dataset>

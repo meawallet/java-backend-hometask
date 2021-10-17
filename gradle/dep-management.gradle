@@ -124,6 +124,8 @@ ext {
                     "com.github.springtestdbunit:spring-test-dbunit",
                     "net.javacrumbs.json-unit:json-unit-assertj"
             ],
+            springSecurity: "org.springframework.boot:spring-boot-starter-security",
+            nimbusJose: "com.nimbusds:nimbus-jose-jwt"
     ]
 }
 
@@ -249,5 +251,7 @@ dependencyManagement {
         dependency "org.mockito:mockito-core:$depsVersions.mockitoCore"
         dependency "junit:junit:$depsVersions.junit"
         dependency "net.javacrumbs.json-unit:json-unit-assertj:$depsVersions.jsonUnit"
+
+        dependency "org.springframework.boot:spring-boot-starter-security:$depsVersions.spring.boot"
     }
 }

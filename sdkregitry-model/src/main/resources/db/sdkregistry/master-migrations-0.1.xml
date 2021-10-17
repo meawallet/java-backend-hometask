@@ -92,4 +92,6 @@
             <column name="updated_at" type="timestamp with time zone"/>
         </createTable>
     </changeSet>
+
+    <include file="db/sdkregistry/master-migrations-0.2.xml"/>
 </databaseChangeLog>

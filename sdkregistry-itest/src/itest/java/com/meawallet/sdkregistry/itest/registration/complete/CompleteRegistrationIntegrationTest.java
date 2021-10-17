@@ -3,13 +3,13 @@ package com.meawallet.sdkregistry.itest.registration.complete;
 import com.github.springtestdbunit.annotation.DatabaseSetup;
 import com.github.springtestdbunit.annotation.DatabaseTearDown;
 import com.github.springtestdbunit.annotation.ExpectedDatabase;
-import com.meawallet.sdkregistry.itest.BaseIntegrationTest;
+import com.meawallet.sdkregistry.itest.AuthIntegrationTest;
 import org.junit.jupiter.api.Test;
 
 import static com.github.springtestdbunit.annotation.DatabaseOperation.DELETE_ALL;
 import static com.github.springtestdbunit.assertion.DatabaseAssertionMode.NON_STRICT;
 
-class CompleteRegistrationIntegrationTest extends BaseIntegrationTest {
+class CompleteRegistrationIntegrationTest extends AuthIntegrationTest {
 
     @Test
     @DatabaseSetup(value = "classpath:dbunit/registration/initializeRegistrationCompleted.xml")
@@ -25,8 +25,8 @@ class CompleteRegistrationIntegrationTest extends BaseIntegrationTest {
     }
 
     @Test
-    @DatabaseSetup(value = "classpath:dbunit/emptyDb.xml")
-    @ExpectedDatabase(value = "classpath:dbunit/emptyDb.xml", assertionMode = NON_STRICT)
+    @DatabaseSetup(value = "classpath:dbunit/authentication/merchantKeys.xml")
+    @ExpectedDatabase(value = "classpath:dbunit/authentication/merchantKeys.xml", assertionMode = NON_STRICT)
     void shouldFailWhenKeysetNotExists() {
         webClient()
                 .post()

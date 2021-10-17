@@ -5,6 +5,9 @@ dependencies {
     implementation deps.codec
     implementation deps.springWeb
     implementation deps.springActuator
+    implementation deps.springSecurity
+    implementation deps.nimbusJose
+
     implementation project(":sdkregitry-api")
     implementation project(":sdkregitry-core")
 

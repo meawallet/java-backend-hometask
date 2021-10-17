@@ -1,0 +1,22 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet author="mikhail.klyuykov" id="create.table.sdk_merchant_key">
+        <createTable tableName="sdk_merchant_key">
+            <column autoIncrement="true" name="id" type="bigint">
+                <constraints primaryKey="true" primaryKeyName="pk_sdk_merchant_key_id"/>
+            </column>
+            <column name="merchant_name" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="public_key" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="kid" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
