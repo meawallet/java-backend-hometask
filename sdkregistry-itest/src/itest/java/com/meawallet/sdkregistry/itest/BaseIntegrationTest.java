@@ -18,6 +18,7 @@ import java.io.IOException;
 import java.io.UncheckedIOException;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
+import java.util.function.Consumer;
 
 import static org.junit.Assert.assertNotNull;
 
@@ -42,15 +43,19 @@ public abstract class BaseIntegrationTest {
     private Integer serverPort;
 
     public WebTestClient webClient() {
-        return webClient(Duration.ofSeconds(10));
+        return webClient(headers -> headers.add(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE));
     }
 
-    public WebTestClient webClient(Duration timeout) {
+    public WebTestClient webClient(Consumer<HttpHeaders> headers) {
+        return webClient(Duration.ofSeconds(10), headers);
+    }
+
+    public WebTestClient webClient(Duration timeout, Consumer<HttpHeaders> headers) {
         return WebTestClient.bindToApplicationContext(applicationContext)
                             .configureClient()
                             .responseTimeout(timeout)
                             .baseUrl("http://localhost:" + serverPort)
-                            .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
+                            .defaultHeaders(headers)
                             .build();
     }
 
