@@ -23,8 +23,4 @@ dependencies {
     itestImplementation project(":sdkregitry-api")
     itestImplementation project(":sdkregitry-core")
     itestImplementation project(":sdkregitry-model")
-
-//    implementation "org.springframework.boot:spring-boot-starter-security"
-//    implementation "org.springframework.security:spring-security-oauth2-resource-server"
-//    implementation "org.springframework.security:spring-security-oauth2-jose"
 }

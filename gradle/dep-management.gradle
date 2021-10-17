@@ -169,6 +169,7 @@ dependencyManagement {
         dependency "org.springframework:spring-messaging:$depsVersions.spring.core"
         dependency "org.springframework:spring-test:$depsVersions.spring.core"
         dependency "org.springframework:spring-r2dbc:$depsVersions.spring.core"
+        dependency "org.springframework.security:spring-security-test:$depsVersions.spring.core"
 
         dependency "commons-codec:commons-codec:$depsVersions.commons.codec"
         dependency "commons-logging:commons-logging:$depsVersions.commons.logging"
@@ -255,7 +256,5 @@ dependencyManagement {
         dependency "net.javacrumbs.json-unit:json-unit-assertj:$depsVersions.jsonUnit"
 
         dependency "org.springframework.boot:spring-boot-starter-security:$depsVersions.spring.boot"
-//        dependency "org.springframework.security:spring-security-oauth2-resource-server:$depsVersions.spring.core"
-//        dependency "org.springframework.security:spring-security-oauth2-jose:$depsVersions.spring.core"
     }
 }

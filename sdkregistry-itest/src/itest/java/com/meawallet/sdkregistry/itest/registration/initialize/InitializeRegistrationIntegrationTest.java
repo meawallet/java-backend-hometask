@@ -7,7 +7,7 @@ import com.meawallet.sdkregistry.core.cryptography.AesEncryptionService;
 import com.meawallet.sdkregistry.core.cryptography.AesKeyGenerator;
 import com.meawallet.sdkregistry.core.cryptography.RandomGenerator;
 import com.meawallet.sdkregistry.core.registration.initialize.SdkKey;
-import com.meawallet.sdkregistry.itest.BaseIntegrationTest;
+import com.meawallet.sdkregistry.itest.AuthIntegrationTest;
 import com.meawallet.sdkregistry.itest.mocks.AttestationServiceMock;
 import com.meawallet.sdkregistry.itest.mocks.CloudMessagingServiceMock;
 import com.meawallet.sdkregistry.itest.mocks.TransactionServiceMock;
@@ -31,7 +31,7 @@ import static com.meawallet.sdkregistry.itest.utils.IntegrationTestData.PLAIN_TR
 import static com.meawallet.sdkregistry.itest.utils.IntegrationTestData.PLAIN_TRANSACTION_MAC_KEY;
 import static org.mockito.BDDMockito.given;
 
-class InitializeRegistrationIntegrationTest extends BaseIntegrationTest {
+class InitializeRegistrationIntegrationTest extends AuthIntegrationTest {
 
     @Autowired
     AesKeyGenerator aesKeyGenerator;
@@ -159,10 +159,8 @@ class InitializeRegistrationIntegrationTest extends BaseIntegrationTest {
     private void resetMocks() {
         Mockito.reset(aesKeyGenerator, randomGenerator, aesEncryptionService);
         attestationServiceMock.reset();
-        ;
         cloudMessagingServiceMock.reset();
         transactionServiceMock.reset();
-        ;
     }
 
     private void mockKeyGenerationOk() {

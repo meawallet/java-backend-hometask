@@ -3,7 +3,6 @@ package com.meawallet.sdkregistry.in.http.config;
 import com.meawallet.sdkregistry.in.http.jwt.SecurityContextRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Profile;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.ReactiveAuthenticationManager;
 import org.springframework.security.config.annotation.method.configuration.EnableReactiveMethodSecurity;
